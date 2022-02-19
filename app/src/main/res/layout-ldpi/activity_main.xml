@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/male"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/heightLayout"
+        android:background="@drawable/malefemalenotfocus"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp">
+
+        <ImageView
+            android:id="@+id/maleIcon"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/male">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/maleIcon"
+            android:layout_marginTop="10dp"
+            android:text="Male"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/heightLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/male"
+        android:background="@drawable/malefemalenotfocus"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/male"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/femaleIcon"
+            android:layout_marginTop="10dp"
+            android:text="Female"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/femaleIcon"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/female">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/heightLayout"
+        android:layout_width="342dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="false"
+        android:background="@drawable/cardlayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:gravity="center"
+            android:text="Height"
+            android:textColor="@color/white"
+            android:textSize="34sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heightTextView"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:text="170"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:text="CM"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heightTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="100dp">
+
+        </SeekBar>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/weightlayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/heightLayout"
+        android:background="@drawable/cardlayout"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/heightLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp">
+
+
+        <TextView
+            android:id="@+id/WeightText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/WeightText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="55"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Weight"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/Weight">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Weight"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/Weight">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sub">
+
+            </ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.widget.Button
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn"
+        android:text="Calculate BMI"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
+        android:layout_marginBottom="50dp">
+
+    </android.widget.Button>
+
+    <RelativeLayout
+        android:id="@+id/Agelayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/cardlayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/heightLayout">
+
+
+        <TextView
+            android:id="@+id/AgeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AgeText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="22"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/plusAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Age"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/Age">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/minusAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Age"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/Age">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sub">
+
+            </ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
